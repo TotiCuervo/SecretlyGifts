@@ -1,0 +1,55 @@
+/*translate*/
+@variants responsive, hover, focus, active {
+    /*right*/
+    .translate-r-2px {
+        transform: translateX(2px)!important;
+    }
+    .translate-r-4px {
+        transform: translateX(4px)!important;
+    }
+    .translate-r-6px {
+        transform: translateX(6px)!important;
+    }
+    .translate-r-8px {
+        transform: translateX(8px)!important;
+    }
+    /*left*/
+    .translate-l-2px {
+        transform: translateX(-2px)!important;
+    }
+    .translate-l-4px {
+        transform: translateX(-4px)!important;
+    }
+    .translate-l-6px {
+        transform: translateX(-6px)!important;
+    }
+    .translate-l-8px {
+        transform: translateX(-8px)!important;
+    }
+    /*top*/
+    .translate-t-2px {
+        transform: translateY(-2px)!important;
+    }
+    .translate-t-4px {
+        transform: translateY(-4px)!important;
+    }
+    .translate-t-6px {
+        transform: translateY(-6px)!important;
+    }
+    .translate-t-8px {
+        transform: translateY(-8px)!important;
+    }
+}
+
+/*transition*/
+.transition-fast {
+    transition: all .2s ease!important;
+}
+
+/*scale*/
+@variants responsive, hover, focus, active {
+    .bounce-sm {
+        transform: scale(0.95);
+    }
+}
+
