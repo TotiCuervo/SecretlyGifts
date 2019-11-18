@@ -6,9 +6,8 @@
         <ParticipantForm v-for="(person, index) in this.participantsForm" :key="index" v-bind:index='index'></ParticipantForm>
         <!--Add Participant and Next Button-->
         <div class="pt-4">
-            <AddParticipantButton></AddParticipantButton>
-            <button class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm" @click="submitForm()">
-                Next
+            <button class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm" @click="backButton()">
+                Back
             </button>
         </div>
     </div>
@@ -16,6 +15,7 @@
 
 <script>
     import {mapActions, mapGetters} from 'vuex';
+
     export default {
         data() {
             return {
@@ -23,19 +23,13 @@
             }
         },
         methods: {
-            ...mapActions('form', ['checkForm']),
-            submitForm() {
-                // this.checkForm();
-                // if (!this.errorFlag) {
-                //     this.$store.commit('form/SET_PAGE', 'ExclusionsPage')
-                // }
-                this.$store.commit('form/SET_PAGE', 'ExclusionsPage')
-
+            backButton() {
+                this.$store.commit('form/SET_PAGE', 'AddParticipantIndex')
             }
-
         },
         computed: {
             ...mapGetters('form', ['participantsForm', 'errors', 'errorFlag'])
+
         }
     }
 </script>

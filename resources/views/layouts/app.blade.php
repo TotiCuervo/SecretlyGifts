@@ -26,7 +26,7 @@
     <script src="https://kit.fontawesome.com/7d75c9db00.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="bg-indigo-700">
     <div id="app">
         <router-view></router-view>
     </div>

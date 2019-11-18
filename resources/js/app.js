@@ -18,6 +18,8 @@ Vue.use(VTooltip);
 //Components
 import Home from './components/Home.vue'
 import CreateEvent from './components/Create/CreateEvent'
+import  {store} from './store'
+
 
 const files = require.context('./', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
@@ -33,7 +35,24 @@ const router = new VueRouter({
         {
             path: '/create',
             name: 'createEvent',
-            component: CreateEvent
+            component: CreateEvent,
+            beforeEnter:(to, from, next) => {
+                store.commit('form/SET_PARTICIPANTS_FORM', [
+                    {
+                        name: '',
+                        email: ''
+                    },
+                    {
+                        name: '',
+                        email: ''
+                    },
+                    {
+                        name: '',
+                        email: '',
+                    }
+                ]);
+                next()
+            }
         },
         { path: '*', redirect: '/' }
     ]
@@ -41,5 +60,6 @@ const router = new VueRouter({
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store
 });
