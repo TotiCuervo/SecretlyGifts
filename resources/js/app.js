@@ -37,20 +37,7 @@ const router = new VueRouter({
             name: 'createEvent',
             component: CreateEvent,
             beforeEnter:(to, from, next) => {
-                store.commit('form/SET_PARTICIPANTS_FORM', [
-                    {
-                        name: '',
-                        email: ''
-                    },
-                    {
-                        name: '',
-                        email: ''
-                    },
-                    {
-                        name: '',
-                        email: '',
-                    }
-                ]);
+                store.commit('form/CLEAR_PARTICIPANTS_FORM');
                 next()
             }
         },

@@ -1,9 +1,8 @@
 <template>
     <div class="flex flex-wrap items-center py-2 w-full">
-        <input v-model="name" maxlength="30" v-bind:class="{'border-white': !error, 'border-red-600': error}" class="appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none" type="text" placeholder="Naruto Uzamaki" aria-label="Full name">
+        <input v-model="name" maxlength="30" v-bind:class="{'border-white': !error, 'border-red-600': error}" class="text-2xl appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none" type="text" placeholder="Naruto Uzamaki" aria-label="Full name">
         <p class="text-white text-xs w-full">{{30 - this.name.length}}</p>
         <p v-if="error" class="text-red-600 font-extrabold text-sm w-full">{{message}}</p>
-
     </div>
 </template>
 

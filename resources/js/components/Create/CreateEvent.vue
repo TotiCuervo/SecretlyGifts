@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen h-screen p-5 text-white">
+    <div class="p-5 text-white">
         <LogoNav></LogoNav>
         <StepNav></StepNav>
 
@@ -7,7 +7,7 @@
             <div class="w-full md:w-4/6 mx-auto">
                 <AddParticipantIndex v-if="page === 'AddParticipantIndex'"></AddParticipantIndex>
                 <ExclusionsPage v-if="page === 'ExclusionsPage'"></ExclusionsPage>
-                <GameDetailPage v-if="page === 'GameDetailPage'"></GameDetailPage>
+                <EventDetailPage v-if="page === 'EventDetailPage'"></EventDetailPage>
             </div>
         </div>
     </div>
@@ -22,7 +22,8 @@
             }
         },
         mounted() {
-            this.currentPage = 'AddParticipantIndex';
+            // this.currentPage = 'AddParticipantIndex';
+            this.currentPage = 'EventDetailPage';
         },
         computed: {
             ...mapGetters('form', ['page']),

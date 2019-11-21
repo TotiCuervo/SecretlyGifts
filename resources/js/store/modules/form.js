@@ -6,16 +6,19 @@ function initialState() {
         participantsForm: [
             {
                 name: '',
-                email: ''
-            },
-            {
-                name: '',
-                email: ''
+                email: '',
+                exclusions: [],
             },
             {
                 name: '',
                 email: '',
-            }
+                exclusions: [],
+            },
+            {
+                name: '',
+                email: '',
+                exclusions: [],
+            },
         ],
         errors: [
             {
@@ -90,10 +93,18 @@ const actions = {
                 commit('UPDATE_EMAIL_MESSAGE', {index: $i, message: 'Email Required'});
                 commit('SET_ERROR_FLAG', true);
             }
+
             //check email format
             else if (!emailChecker.test(state.participantsForm[$i].email)) {
                 commit('UPDATE_EMAIL_ERROR', {index: $i, value:true});
                 commit('UPDATE_EMAIL_MESSAGE', {index: $i, message: 'Valid Email Required'});
+                commit('SET_ERROR_FLAG', true);
+            }
+
+            //checks for duplicate names
+            if (state.participantsForm.filter(person => person.name.toUpperCase() === state.participantsForm[$i].name.toUpperCase()).length > 1) {
+                commit('UPDATE_NAME_ERROR', {index: $i, value:true});
+                commit('UPDATE_NAME_MESSAGE', {index: $i, message: 'Cannot have duplicate names'});
                 commit('SET_ERROR_FLAG', true);
             }
 
@@ -104,6 +115,30 @@ const actions = {
         return true;
 
     },
+    deleteSpecificParticipantFromAllExclusions({ commit, state }, participant) {
+
+        //loop through the list
+        for (let $i = 0; $i < state.participantsForm.length; $i++) {
+
+            //sets for simplicity
+            let exclusionList = state.participantsForm[$i].exclusions;
+
+            //loop through this users exclusion list
+            for (let $b = 0; $b < exclusionList.length; $b++) {
+
+                //if the names match delete from that list
+                if (exclusionList[$b] === participant) {
+
+                    commit('DELETE_PARTICIPANT_FROM_SPECIFIC_EXCLUSIONS_LIST', {
+                        participantIndex: $i,
+                        nameIndex: $b
+                    });
+
+                }
+            }
+        }
+
+    }
 
 };
 
@@ -126,10 +161,14 @@ const mutations = {
     UPDATE_PARTICIPANT_FORM_EMAIL(state, payload) {
         state.participantsForm[payload.index].email = payload.email;
     },
+    ADD_PARTICIPANT_FORM_EXCLUSION(state, payload) {
+        state.participantsForm[payload.index].exclusions.push(payload.name);
+    },
     ADD_PARTICIPANT_TO_FORM(state) {
         state.participantsForm.push({
             name: '',
             email: '',
+            exclusions: []
         });
     },
     ADD_ERROR(state) {
@@ -165,6 +204,18 @@ const mutations = {
         state.participantsForm = $newForm;
 
     },
+    DELETE_PARTICIPANT_FROM_SPECIFIC_EXCLUSIONS_LIST(state, payload) {
+        let $newForm = [];
+
+        for (let $i = 0; $i < state.participantsForm[payload.participantIndex].exclusions.length; $i++) {
+
+            if ($i !== payload.nameIndex) {
+                $newForm.push(state.participantsForm[payload.participantIndex].exclusions[$i]);
+            }
+        }
+
+        state.participantsForm[payload.participantIndex].exclusions = $newForm;
+    },
     DELETE_ERROR(state, index) {
 
         let $newErrors = [];
@@ -179,11 +230,27 @@ const mutations = {
         state.errors = $newErrors;
 
     },
-    CLEAR_FORM(state){
-        state.form = {
-            fieldOne: null,
-            fieldTwo: null,
-        };
+    CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT(state, index) {
+        state.participantsForm[index].exclusions = [];
+    },
+    CLEAR_PARTICIPANTS_FORM(state){
+        state.participantsForm = [
+            {
+                name: '',
+                email: '',
+                exclusions: [],
+            },
+            {
+                name: '',
+                email: '',
+                exclusions: [],
+            },
+            {
+                name: '',
+                email: '',
+                exclusions: [],
+            },
+        ];
     },
 };
 

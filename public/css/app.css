@@ -278,9 +278,19 @@
           transform: scale(0.95);
 }
 
+.bounce-md {
+  -webkit-transform: scale(0.70);
+          transform: scale(0.70);
+}
+
 .hover\:bounce-sm:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.hover\:bounce-md:hover {
+  -webkit-transform: scale(0.70);
+          transform: scale(0.70);
 }
 
 .focus\:bounce-sm:focus {
@@ -288,9 +298,19 @@
           transform: scale(0.95);
 }
 
+.focus\:bounce-md:focus {
+  -webkit-transform: scale(0.70);
+          transform: scale(0.70);
+}
+
 .active\:bounce-sm:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.active\:bounce-md:active {
+  -webkit-transform: scale(0.70);
+          transform: scale(0.70);
 }
 
 @media (min-width: 640px) {
@@ -563,9 +583,19 @@
             transform: scale(0.95);
   }
 
+  .sm\:bounce-md {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .sm\:hover\:bounce-sm:hover {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .sm\:hover\:bounce-md:hover {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 
   .sm\:focus\:bounce-sm:focus {
@@ -573,9 +603,19 @@
             transform: scale(0.95);
   }
 
+  .sm\:focus\:bounce-md:focus {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .sm\:active\:bounce-sm:active {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .sm\:active\:bounce-md:active {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 }
 
@@ -849,9 +889,19 @@
             transform: scale(0.95);
   }
 
+  .md\:bounce-md {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .md\:hover\:bounce-sm:hover {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .md\:hover\:bounce-md:hover {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 
   .md\:focus\:bounce-sm:focus {
@@ -859,9 +909,19 @@
             transform: scale(0.95);
   }
 
+  .md\:focus\:bounce-md:focus {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .md\:active\:bounce-sm:active {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .md\:active\:bounce-md:active {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 }
 
@@ -1135,9 +1195,19 @@
             transform: scale(0.95);
   }
 
+  .lg\:bounce-md {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .lg\:hover\:bounce-sm:hover {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .lg\:hover\:bounce-md:hover {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 
   .lg\:focus\:bounce-sm:focus {
@@ -1145,9 +1215,19 @@
             transform: scale(0.95);
   }
 
+  .lg\:focus\:bounce-md:focus {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .lg\:active\:bounce-sm:active {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .lg\:active\:bounce-md:active {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 }
 
@@ -1421,9 +1501,19 @@
             transform: scale(0.95);
   }
 
+  .xl\:bounce-md {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .xl\:hover\:bounce-sm:hover {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .xl\:hover\:bounce-md:hover {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 
   .xl\:focus\:bounce-sm:focus {
@@ -1431,9 +1521,19 @@
             transform: scale(0.95);
   }
 
+  .xl\:focus\:bounce-md:focus {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
+  }
+
   .xl\:active\:bounce-sm:active {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+
+  .xl\:active\:bounce-md:active {
+    -webkit-transform: scale(0.70);
+            transform: scale(0.70);
   }
 }
 
@@ -6935,6 +7035,46 @@ video {
 }
 
 .focus\:opacity-100:focus{
+  opacity: 1;
+}
+
+.active\:opacity-0:active{
+  opacity: 0;
+}
+
+.active\:opacity-25:active{
+  opacity: 0.25;
+}
+
+.active\:opacity-50:active{
+  opacity: 0.5;
+}
+
+.active\:opacity-75:active{
+  opacity: 0.75;
+}
+
+.active\:opacity-100:active{
+  opacity: 1;
+}
+
+.disabled\:opacity-0:disabled{
+  opacity: 0;
+}
+
+.disabled\:opacity-25:disabled{
+  opacity: 0.25;
+}
+
+.disabled\:opacity-50:disabled{
+  opacity: 0.5;
+}
+
+.disabled\:opacity-75:disabled{
+  opacity: 0.75;
+}
+
+.disabled\:opacity-100:disabled{
   opacity: 1;
 }
 
@@ -12928,6 +13068,10 @@ video {
   width: 2.5rem;
 }
 
+.w-11{
+  width: 2.75rem;
+}
+
 .w-12{
   width: 3rem;
 }
@@ -18079,6 +18223,46 @@ video {
   }
 
   .sm\:focus\:opacity-100:focus{
+    opacity: 1;
+  }
+
+  .sm\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .sm\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .sm\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .sm\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .sm\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .sm\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .sm\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .sm\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .sm\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .sm\:disabled\:opacity-100:disabled{
     opacity: 1;
   }
 
@@ -24072,6 +24256,10 @@ video {
     width: 2.5rem;
   }
 
+  .sm\:w-11{
+    width: 2.75rem;
+  }
+
   .sm\:w-12{
     width: 3rem;
   }
@@ -29127,6 +29315,46 @@ video {
   }
 
   .md\:focus\:opacity-100:focus{
+    opacity: 1;
+  }
+
+  .md\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .md\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .md\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .md\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .md\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .md\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .md\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .md\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .md\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .md\:disabled\:opacity-100:disabled{
     opacity: 1;
   }
 
@@ -35120,6 +35348,10 @@ video {
     width: 2.5rem;
   }
 
+  .md\:w-11{
+    width: 2.75rem;
+  }
+
   .md\:w-12{
     width: 3rem;
   }
@@ -40175,6 +40407,46 @@ video {
   }
 
   .lg\:focus\:opacity-100:focus{
+    opacity: 1;
+  }
+
+  .lg\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .lg\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .lg\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .lg\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .lg\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .lg\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .lg\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .lg\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .lg\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .lg\:disabled\:opacity-100:disabled{
     opacity: 1;
   }
 
@@ -46168,6 +46440,10 @@ video {
     width: 2.5rem;
   }
 
+  .lg\:w-11{
+    width: 2.75rem;
+  }
+
   .lg\:w-12{
     width: 3rem;
   }
@@ -51223,6 +51499,46 @@ video {
   }
 
   .xl\:focus\:opacity-100:focus{
+    opacity: 1;
+  }
+
+  .xl\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .xl\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .xl\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .xl\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .xl\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .xl\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .xl\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .xl\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .xl\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .xl\:disabled\:opacity-100:disabled{
     opacity: 1;
   }
 
@@ -57214,6 +57530,10 @@ video {
 
   .xl\:w-10{
     width: 2.5rem;
+  }
+
+  .xl\:w-11{
+    width: 2.75rem;
   }
 
   .xl\:w-12{

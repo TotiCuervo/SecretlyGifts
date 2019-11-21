@@ -8,11 +8,15 @@ module.exports = {
         },
         borderWidth: {
             '1.5': '1.5px'
+        },
+        width: {
+            '11': '2.75rem'
         }
     }
   },
   variants: {
       borderWidth: ['responsive', 'hover', 'focus'],
+      opacity: ['responsive', 'hover', 'focus', 'active', 'disabled']
   },
   plugins: []
 }

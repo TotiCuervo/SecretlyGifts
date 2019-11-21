@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-wrap items-center py-2 w-full">
-        <input v-model="email" v-bind:class="{'border-white': !error, 'border-red-600': error}" class="w-full appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none" type="text" placeholder="RamenLover3000@hokage.com" aria-label="Full name">
+        <input v-model="email" v-bind:class="{'border-white': !error, 'border-red-600': error}" class="text-2xl w-full appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none" type="text" placeholder="RamenLover3000@hokage.com" aria-label="Full name">
         <p v-if="error" class="text-red-600 font-extrabold text-sm w-full pt-2">{{message}}</p>
     </div>
 </template>
@@ -33,7 +33,7 @@
                     if(this.error) {
                         this.error = false;
                     }
-                    
+
                     return this.$store.commit('form/UPDATE_PARTICIPANT_FORM_EMAIL', payload);
                 }
             },

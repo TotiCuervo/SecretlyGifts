@@ -5,9 +5,9 @@
         <!--Forms-->
         <ParticipantForm v-for="(person, index) in this.participantsForm" :key="index" v-bind:index='index'></ParticipantForm>
         <!--Add Participant and Next Button-->
-        <div class="pt-4">
+        <div class="pt-4 pb-10">
             <AddParticipantButton></AddParticipantButton>
-            <button class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm" @click="submitForm()">
+            <button class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm transition-fast" @click="submitForm()">
                 Next
             </button>
         </div>

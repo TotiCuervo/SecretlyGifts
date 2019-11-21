@@ -51,5 +51,8 @@
     .bounce-sm {
         transform: scale(0.95);
     }
+    .bounce-md {
+        transform: scale(0.70);
+    }
 }
 

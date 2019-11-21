@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-8 w-4/6 mx-auto">
+    <div class="pt-4 w-full">
         <!--Person header-->
         <span class="text-2xl font-bold font-baloo">
             Person {{index+1}}
@@ -37,7 +37,9 @@
 
         },
         methods: {
+            ...mapActions('form', ['deleteSpecificParticipantFromAllExclusions']),
             deleteParticipant() {
+                this.deleteSpecificParticipantFromAllExclusions(this.name);
                 this.$store.commit('form/DELETE_PARTICIPANT_FROM_FORM', this.index);
                 this.$store.commit('form/DELETE_ERROR', this.index);
             }
