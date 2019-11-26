@@ -23,19 +23,19 @@
             }
         },
         methods: {
-            ...mapActions('form', ['checkForm']),
+            ...mapActions('participant', ['checkForm']),
             submitForm() {
-                // this.checkForm();
-                // if (!this.errorFlag) {
-                //     this.$store.commit('form/SET_PAGE', 'ExclusionsPage')
-                // }
-                this.$store.commit('form/SET_PAGE', 'ExclusionsPage')
+                this.checkForm();
+                if (!this.errorFlag) {
+                    this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
+                }
+                // this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
 
             }
 
         },
         computed: {
-            ...mapGetters('form', ['participantsForm', 'errors', 'errorFlag'])
+            ...mapGetters('participant', ['participantsForm', 'errors', 'errorFlag'])
         }
     }
 </script>

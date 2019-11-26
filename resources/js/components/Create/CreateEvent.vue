@@ -26,13 +26,13 @@
             this.currentPage = 'EventDetailPage';
         },
         computed: {
-            ...mapGetters('form', ['page']),
+            ...mapGetters('page', ['page']),
             currentPage: {
                 get() {
                     return this.page;
                 },
                 set(value) {
-                    return this.$store.commit('form/SET_PAGE', value)
+                    return this.$store.commit('page/SET_PAGE', value)
                 }
             }
         }

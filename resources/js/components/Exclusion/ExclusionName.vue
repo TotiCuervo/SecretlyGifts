@@ -18,8 +18,7 @@
         },
         methods: {
             deleteFromExclusionList() {
-                console.log('made it');
-                this.$store.commit('form/DELETE_PARTICIPANT_FROM_SPECIFIC_EXCLUSIONS_LIST', {
+                this.$store.commit('participant/DELETE_PARTICIPANT_FROM_SPECIFIC_EXCLUSIONS_LIST', {
                     participantIndex: this.participantIndex,
                     nameIndex: this.nameIndex
                 });
@@ -34,7 +33,7 @@
             }
         },
         computed: {
-            ...mapGetters('form', ['participantsForm']),
+            ...mapGetters('participant', ['participantsForm']),
             name: {
                 get() {
                     return this.participantsForm[this.participantIndex].exclusions[this.nameIndex];

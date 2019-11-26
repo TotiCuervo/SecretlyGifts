@@ -18,7 +18,7 @@
             }
         },
         computed: {
-            ...mapGetters('form', ['page']),
+            ...mapGetters('page', ['page']),
 
         }
     }

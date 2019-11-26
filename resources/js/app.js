@@ -37,7 +37,8 @@ const router = new VueRouter({
             name: 'createEvent',
             component: CreateEvent,
             beforeEnter:(to, from, next) => {
-                store.commit('form/CLEAR_PARTICIPANTS_FORM');
+                store.commit('participant/CLEAR_PARTICIPANTS_FORM');
+                store.dispatch('event/setUpBasicEventFormTemplate');
                 next()
             }
         },

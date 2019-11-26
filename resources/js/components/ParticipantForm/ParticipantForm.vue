@@ -37,16 +37,16 @@
 
         },
         methods: {
-            ...mapActions('form', ['deleteSpecificParticipantFromAllExclusions']),
+            ...mapActions('participant', ['deleteSpecificParticipantFromAllExclusions']),
             deleteParticipant() {
                 this.deleteSpecificParticipantFromAllExclusions(this.name);
-                this.$store.commit('form/DELETE_PARTICIPANT_FROM_FORM', this.index);
-                this.$store.commit('form/DELETE_ERROR', this.index);
+                this.$store.commit('participant/DELETE_PARTICIPANT_FROM_FORM', this.index);
+                this.$store.commit('participant/DELETE_ERROR', this.index);
             }
         },
         props: ['index'],
         computed: {
-            ...mapGetters('form', ['participantsForm', 'errors']),
+            ...mapGetters('participant', ['participantsForm', 'errors']),
             name: {
                 get() {
                     return this.participantsForm[this.index].name;
@@ -56,7 +56,7 @@
                         index: this.index,
                         name: value,
                     };
-                    return this.$store.commit('form/UPDATE_PARTICIPANT_FORM_NAME', payload);
+                    return this.$store.commit('participant/UPDATE_PARTICIPANT_FORM_NAME', payload);
                 }
             },
             email: {
@@ -68,7 +68,7 @@
                         index: this.index,
                         email: value,
                     };
-                    return this.$store.commit('form/UPDATE_PARTICIPANT_FORM_EMAIL', payload);
+                    return this.$store.commit('participant/UPDATE_PARTICIPANT_FORM_EMAIL', payload);
                 }
             }
         }

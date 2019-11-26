@@ -31,7 +31,7 @@
             }
         },
         computed: {
-            ...mapGetters('form', ['participantsForm']),
+            ...mapGetters('participant', ['participantsForm']),
             participant: {
                 get() {
                     return this.participantsForm[this.index];

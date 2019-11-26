@@ -33,22 +33,22 @@
         },
         methods: {
             backButton() {
-                this.$store.commit('form/SET_PAGE', 'AddParticipantIndex')
+                this.$store.commit('page/SET_PAGE', 'AddParticipantIndex')
             },
             nextButton() {
                 if (this.everyoneCanBePicked) {
-                    this.$store.commit('form/SET_PAGE', 'EventDetailPage')
+                    this.$store.commit('page/SET_PAGE', 'EventDetailPage')
                 }
             }
         },
         computed: {
-            ...mapGetters('form', ['participantsForm']),
+            ...mapGetters('participant', ['participantsForm']),
             canExcludePeople(){
                 // return this.participantsForm.length !== 3;
                 if (this.participantsForm.length === 3) {
-                    this.$store.commit('form/CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT', 0);
-                    this.$store.commit('form/CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT', 1);
-                    this.$store.commit('form/CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT', 2);
+                    this.$store.commit('participant/CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT', 0);
+                    this.$store.commit('participant/CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT', 1);
+                    this.$store.commit('participant/CLEAR_ALL_EXCLUSIONS_FROM_PARTICIPANT', 2);
 
                     return false
                 } else {

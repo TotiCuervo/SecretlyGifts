@@ -23,7 +23,7 @@
             addToExclusion() {
                 if (this.selected !=='31WordCharacterForCounterChecker' && !this.participantsForm[this.index].exclusions.find(x => x === this.selected)) {
 
-                    this.$store.commit('form/ADD_PARTICIPANT_FORM_EXCLUSION', {
+                    this.$store.commit('participant/ADD_PARTICIPANT_FORM_EXCLUSION', {
                         index: this.index,
                         name: this.selected
                     });
@@ -41,7 +41,7 @@
             }
         },
         computed: {
-            ...mapGetters('form', ['participantsForm']),
+            ...mapGetters('participant', ['participantsForm']),
 
         }
     }

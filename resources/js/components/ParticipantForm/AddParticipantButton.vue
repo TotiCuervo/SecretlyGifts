@@ -14,8 +14,8 @@
         },
         methods: {
             addPerson() {
-                this.$store.commit('form/ADD_PARTICIPANT_TO_FORM');
-                this.$store.commit('form/ADD_ERROR')
+                this.$store.commit('participant/ADD_PARTICIPANT_TO_FORM');
+                this.$store.commit('participant/ADD_ERROR')
             }
         }
     }
