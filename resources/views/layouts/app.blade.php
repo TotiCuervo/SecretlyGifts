@@ -20,8 +20,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
-{{--    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">--}}
-
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/7d75c9db00.js" crossorigin="anonymous"></script>
 

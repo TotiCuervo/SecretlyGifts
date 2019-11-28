@@ -4,5 +4,5 @@
     src: url("../fonts/Baloo-Regular.ttf") format("truetype");
 }
 .font-baloo {
-    font-family: 'Baloo', cursive;
+    font-family: 'Baloo', cursive !important;
 }

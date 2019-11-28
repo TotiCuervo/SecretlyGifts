@@ -1,7 +1,7 @@
 <template>
     <!--Takes up full screen-->
     <div class="w-screen bg-indigo-700 h-screen">
-        <AlternativeNames></AlternativeNames>
+<!--        <AlternativeNames></AlternativeNames>-->
         <HomeScreenCallToAction></HomeScreenCallToAction>
         <GetStarted></GetStarted>
     </div>

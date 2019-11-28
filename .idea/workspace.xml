@@ -2,30 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65cb24ed-8fb8-4308-b700-6ff1b7ae9bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/EventForm/NameOfEvent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ParticipantForm/InvitationMessage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/event.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Create/AddParticipantIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/AddParticipantIndex.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Create/CreateEvent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/CreateEvent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Create/EventDetailPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/EventDetailPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Create/ExclusionsPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/ExclusionsPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Create/StepNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/StepNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Date/DateInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/EventForm/DateInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Exclusion/ExclusionDropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Exclusion/ExclusionDropdown.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Exclusion/ExclusionName.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Exclusion/ExclusionName.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Exclusion/ExclusionNameIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Exclusion/ExclusionNameIndex.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Exclusion/ParticipantExclusionForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Exclusion/ParticipantExclusionForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Form/AddParticipantButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParticipantForm/AddParticipantButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Form/GiftLimit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/EventForm/GiftLimit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Form/ParticipantForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParticipantForm/ParticipantForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Form/ParticipantFormEmail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParticipantForm/ParticipantFormEmail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Form/ParticipantFormName.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParticipantForm/ParticipantFormName.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/participant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/EventForm/GiftLimit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/EventForm/GiftLimit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LogoNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LogoNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/participant.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/participant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -157,6 +149,7 @@
   <component name="ProjectId" id="1TVa8XUBwGZdQ60y7VJW1kGhnGE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -199,7 +192,7 @@
       <workItem from="1573547560396" duration="21327000" />
       <workItem from="1573682307450" duration="139000" />
       <workItem from="1573682474088" duration="17069000" />
-      <workItem from="1574043405410" duration="38464000" />
+      <workItem from="1574043405410" duration="67485000" />
     </task>
     <servers />
   </component>

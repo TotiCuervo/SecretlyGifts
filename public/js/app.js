@@ -1889,12 +1889,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('participant', ['checkForm']), {
     submitForm: function submitForm() {
-      this.checkForm();
+      this.checkForm(); // if (!this.errorFlag) {
+      //     this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
+      // }
+      // this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
 
-      if (!this.errorFlag) {
-        this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
-      } // this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
-
+      this.$store.commit('page/SET_PAGE', 'EventDetailPage');
     }
   }),
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])('participant', ['participantsForm', 'errors', 'errorFlag']))
@@ -1939,8 +1939,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return {};
   },
   mounted: function mounted() {
-    // this.currentPage = 'AddParticipantIndex';
-    this.currentPage = 'EventDetailPage';
+    this.currentPage = 'AddParticipantIndex'; // this.currentPage = 'EventDetailPage';
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])('page', ['page']), {
     currentPage: {
@@ -2008,15 +2007,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: {
     backButton: function backButton() {
-      this.$store.commit('form/SET_PAGE', 'ExclusionsPage');
+      this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
     },
     submitForm: function submitForm() {
-      axios.post('/api/event/create', this.form).then(function (response) {
-        console.log(response);
+      var _this = this;
+
+      //creates events
+      axios.post('/api/event/store', this.form).then(function (response) {
+        //create event
+        var $event = response.data; //creates participants
+
+        axios.post('/api/participant/massStore', {
+          participants: _this.participantsForm,
+          event_id: $event.id
+        }).then(function (response) {
+          console.log($event); //pairs participants
+
+          axios.post('/api/event/' + $event.id + '/drawNames');
+        });
       });
     }
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])('event', ['form']))
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])('event', ['form']), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])('participant', ['participantsForm']))
 });
 
 /***/ }),
@@ -2278,8 +2290,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: {
     inputIfNumber: function inputIfNumber() {
-      console.log('made it');
-
       if (this.giftLimit.length > 0) {
         if (this.giftLimit.length === 1 && isNaN(parseFloat(this.giftLimit))) {
           this.$store.commit('event/SET_FORM_GIFT_LIMIT', '');
@@ -2744,8 +2754,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "LogoNav"
+  data: function data() {
+    return {};
+  },
+  methods: {
+    goToHomeScreen: function goToHomeScreen() {}
+  }
 });
 
 /***/ }),
@@ -38845,11 +38862,11 @@ var render = function() {
             }
           },
           [
-            _c("option", { attrs: { value: "dollar" } }, [_vm._v("$")]),
+            _c("option", { attrs: { value: "$" } }, [_vm._v("$")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "euro" } }, [_vm._v("€")]),
+            _c("option", { attrs: { value: "€" } }, [_vm._v("€")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "pound" } }, [_vm._v("£")])
+            _c("option", { attrs: { value: "£" } }, [_vm._v("£")])
           ]
         ),
         _vm._v(" "),
@@ -39327,13 +39344,7 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "w-screen bg-indigo-700 h-screen" },
-    [
-      _c("AlternativeNames"),
-      _vm._v(" "),
-      _c("HomeScreenCallToAction"),
-      _vm._v(" "),
-      _c("GetStarted")
-    ],
+    [_c("HomeScreenCallToAction"), _vm._v(" "), _c("GetStarted")],
     1
   )
 }
@@ -39550,18 +39561,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "w-full" },
+    [
+      _c(
+        "router-link",
+        { staticClass: "text-xl font-baloo", attrs: { to: { name: "home" } } },
+        [_vm._v("\n        Secretly\n    ")]
+      )
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-full" }, [
-      _c("h1", { staticClass: "text-xl font-baloo" }, [_vm._v("Secretly")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -58093,8 +58106,8 @@ var actions = {
     var commit = _ref2.commit,
         state = _ref2.state;
     commit('SET_FORM_NAME', 'Secret Gift Exchange');
-    commit('SET_FORM_CURRENCY', 'dollar');
-    commit('SET_FORM_MESSAGE', 'Hello everyone! I have arranged a secret gift exchange using Secretly! Below is person that you have drawn!');
+    commit('SET_FORM_CURRENCY', '$');
+    commit('SET_FORM_MESSAGE', 'I have arranged a secret gift exchange using Secretly! Below is the person that you have drawn!');
   }
 };
 var mutations = {
@@ -58293,7 +58306,7 @@ var actions = {
             message: 'Valid Email Required'
           });
           commit('SET_ERROR_FLAG', true);
-        } //check for duplicate emails
+        } //check for duplicate mail
         else if (state.participantsForm.filter(function (person) {
             return person.email.toUpperCase() === state.participantsForm[$i].email.toUpperCase();
           }).length > 1) {
@@ -58303,7 +58316,7 @@ var actions = {
             });
             commit('UPDATE_EMAIL_MESSAGE', {
               index: $i,
-              message: 'Cannot have duplicate emails'
+              message: 'Cannot have duplicate mail'
             });
             commit('SET_ERROR_FLAG', true);
           }
@@ -58437,17 +58450,34 @@ var mutations = {
     state.errors = errorList;
   },
   CLEAR_PARTICIPANTS_FORM: function CLEAR_PARTICIPANTS_FORM(state) {
+    // state.participantsForm = [
+    //     {
+    //         name: 'Toti',
+    //         email: 'cuervo@gmail.com',
+    //         exclusions: [],
+    //     },
+    //     {
+    //         name: '',
+    //         email: '',
+    //         exclusions: [],
+    //     },
+    //     {
+    //         name: '',
+    //         email: '',
+    //         exclusions: [],
+    //     },
+    // ];
     state.participantsForm = [{
-      name: '',
-      email: '',
+      name: 'Toti',
+      email: 'cuervo@gmail.com',
       exclusions: []
     }, {
-      name: '',
-      email: '',
+      name: 'Bre',
+      email: 'bre@gmail.com',
       exclusions: []
     }, {
-      name: '',
-      email: '',
+      name: 'Jake',
+      email: 'jake@gmail.com',
       exclusions: []
     }];
   }

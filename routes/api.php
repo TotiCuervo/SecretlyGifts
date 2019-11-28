@@ -17,4 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/event/create', 'EventController@create');
+//events
+Route::post('/event/store', 'EventController@store');
+Route::post('/event/{event}/drawNames', 'EventController@drawNames');
+
+//participants
+Route::post('/participant/massStore', 'ParticipantController@massStore');
+

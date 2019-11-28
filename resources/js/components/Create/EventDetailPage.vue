@@ -38,17 +38,31 @@
         },
         methods: {
             backButton() {
-                this.$store.commit('form/SET_PAGE', 'ExclusionsPage');
+                this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
             },
             submitForm() {
-                axios.post('/api/event/create', this.form)
+                //creates events
+                axios.post('/api/event/store', this.form)
                     .then(response => {
-                        console.log(response);
+
+                        //create event
+                        let $event = response.data;
+
+                        //creates participants
+                        axios.post('/api/participant/massStore', {
+                            participants: this.participantsForm,
+                            event_id: $event.id
+                        }).then(response => {
+                            console.log($event);
+                            //pairs participants
+                            axios.post('/api/event/'+$event.id+'/drawNames');
+                        })
                     });
             }
         },
         computed: {
-            ...mapGetters('event', ['form'])
+            ...mapGetters('event', ['form']),
+            ...mapGetters('participant', ['participantsForm'])
 
         }
     }

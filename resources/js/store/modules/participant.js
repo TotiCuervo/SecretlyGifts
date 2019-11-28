@@ -105,10 +105,10 @@ const actions = {
                 commit('UPDATE_EMAIL_MESSAGE', {index: $i, message: 'Valid Email Required'});
                 commit('SET_ERROR_FLAG', true);
             }
-            //check for duplicate emails
+            //check for duplicate mail
             else if (state.participantsForm.filter(person => person.email.toUpperCase() === state.participantsForm[$i].email.toUpperCase()).length > 1) {
                 commit('UPDATE_EMAIL_ERROR', {index: $i, value:true});
-                commit('UPDATE_EMAIL_MESSAGE', {index: $i, message: 'Cannot have duplicate emails'});
+                commit('UPDATE_EMAIL_MESSAGE', {index: $i, message: 'Cannot have duplicate mail'});
                 commit('SET_ERROR_FLAG', true);
             }
 
@@ -253,20 +253,37 @@ const mutations = {
         state.errors = errorList;
     },
     CLEAR_PARTICIPANTS_FORM(state){
+        // state.participantsForm = [
+        //     {
+        //         name: 'Toti',
+        //         email: 'cuervo@gmail.com',
+        //         exclusions: [],
+        //     },
+        //     {
+        //         name: '',
+        //         email: '',
+        //         exclusions: [],
+        //     },
+        //     {
+        //         name: '',
+        //         email: '',
+        //         exclusions: [],
+        //     },
+        // ];
         state.participantsForm = [
             {
-                name: '',
-                email: '',
+                name: 'Toti',
+                email: 'cuervo@gmail.com',
                 exclusions: [],
             },
             {
-                name: '',
-                email: '',
+                name: 'Bre',
+                email: 'bre@gmail.com',
                 exclusions: [],
             },
             {
-                name: '',
-                email: '',
+                name: 'Jake',
+                email: 'jake@gmail.com',
                 exclusions: [],
             },
         ];

@@ -3,9 +3,9 @@
         <label class="block uppercase tracking-wide text-white text-xs font-bold">Gift limit<span class="font-normal lowercase"> - Optional</span></label>
         <div class="relative inline-block">
             <select v-model="currency" @focus="focusLine = true" @focusout="focusLine = false"  class="appearance-none w-full bg-transparent border-none text-white py-2 px-4 pr-8 rounded-none leading-tight focus:outline-none disabled:opacity-50 transition-fast" id="grid-state">
-                <option value="dollar">$</option>
-                <option value="euro">€</option>
-                <option value="pound">£</option>
+                <option value="$">$</option>
+                <option value="€">€</option>
+                <option value="£">£</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white disabled:opacity-50 transition-fast">
                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -26,7 +26,6 @@
         },
         methods: {
             inputIfNumber() {
-                console.log('made it');
                 if (this.giftLimit.length > 0) {
 
                     if (this.giftLimit.length === 1 && isNaN(parseFloat(this.giftLimit))) {

@@ -28,8 +28,8 @@ const actions = {
     },
     setUpBasicEventFormTemplate({commit, state}) {
         commit('SET_FORM_NAME', 'Secret Gift Exchange');
-        commit('SET_FORM_CURRENCY', 'dollar');
-        commit('SET_FORM_MESSAGE', 'Hello everyone! I have arranged a secret gift exchange using Secretly! Below is person that you have drawn!');
+        commit('SET_FORM_CURRENCY', '$');
+        commit('SET_FORM_MESSAGE', 'I have arranged a secret gift exchange using Secretly! Below is the person that you have drawn!');
     }
 
 };

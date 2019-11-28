@@ -22,8 +22,8 @@
             }
         },
         mounted() {
-            // this.currentPage = 'AddParticipantIndex';
-            this.currentPage = 'EventDetailPage';
+            this.currentPage = 'AddParticipantIndex';
+            // this.currentPage = 'EventDetailPage';
         },
         computed: {
             ...mapGetters('page', ['page']),

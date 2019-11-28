@@ -2,9 +2,34 @@
 
 namespace App;
 
+use App\Mail\DrawnName;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
+
+use Illuminate\Support\Facades\Mail;
+
 
 class Event extends Model
 {
-    //
+    protected $fillable = ['name', 'currency', 'giftLimit', 'date', 'message'];
+
+    public function participants() {
+        return $this->hasMany(Participant::class);
+    }
+
+    public function dateText() {
+        return date("M jS, Y", strtotime($this->date));
+
+    }
+
+    public function sendAllDrawnEmails() {
+
+        foreach ($this->participants()->get() as $participant) {
+            Log::error($participant->name);
+
+            Mail::to($participant->email)->send(
+                new DrawnName($participant, $this)
+            );
+        }
+    }
 }

@@ -1,12 +1,23 @@
 <template>
     <div class="w-full">
-        <h1 class="text-xl font-baloo">Secretly</h1>
+        <router-link :to="{name: 'home'}" class="text-xl font-baloo">
+            Secretly
+        </router-link>
     </div>
 </template>
 
 <script>
     export default {
-        name: "LogoNav"
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            goToHomeScreen() {
+
+            }
+        }
     }
 </script>
 
