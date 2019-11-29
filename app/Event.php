@@ -18,7 +18,7 @@ class Event extends Model
     }
 
     public function dateText() {
-        return date("M jS, Y", strtotime($this->date));
+        return date("l, M jS, Y", strtotime($this->date));
 
     }
 

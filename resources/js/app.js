@@ -15,6 +15,13 @@ Vue.use(Vuex);
 import VTooltip from 'v-tooltip'
 Vue.use(VTooltip);
 
+//vue-tailwind
+import VueTailwind from 'vue-tailwind'
+Vue.use(VueTailwind);
+
+//vue-moment
+Vue.use(require('vue-moment'));
+
 //Components
 import Home from './components/Home.vue'
 import CreateEvent from './components/Create/CreateEvent'
