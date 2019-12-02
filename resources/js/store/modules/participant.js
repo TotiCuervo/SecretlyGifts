@@ -253,40 +253,24 @@ const mutations = {
         state.errors = errorList;
     },
     CLEAR_PARTICIPANTS_FORM(state){
-        // state.participantsForm = [
-        //     {
-        //         name: '',
-        //         email: '',
-        //         exclusions: [],
-        //     },
-        //     {
-        //         name: '',
-        //         email: '',
-        //         exclusions: [],
-        //     },
-        //     {
-        //         name: '',
-        //         email: '',
-        //         exclusions: [],
-        //     },
-        // ];
         state.participantsForm = [
             {
-                name: 'Toti',
-                email: 'cuervor14@gmail.com',
+                name: '',
+                email: '',
                 exclusions: [],
             },
             {
-                name: 'Bre',
-                email: 'cuervor14@gmail.com',
+                name: '',
+                email: '',
                 exclusions: [],
             },
             {
-                name: 'Jake',
-                email: 'cuervor14@gmail.cm',
+                name: '',
+                email: '',
                 exclusions: [],
             },
         ];
+
     },
 };
 

@@ -1889,11 +1889,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('participant', ['checkForm']), {
     submitForm: function submitForm() {
-      this.checkForm(); // if (!this.errorFlag) {
-      //     this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
-      // }
+      this.checkForm();
 
-      this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
+      if (!this.errorFlag) {
+        this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
+      }
     }
   }),
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])('participant', ['participantsForm', 'errors', 'errorFlag']))
@@ -39141,7 +39141,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "w-full text-center pt-5 text-xl" }, [
       _c("p", { staticClass: "block" }, [
-        _vm._v("Congratulations! your "),
+        _vm._v("Congratulations! Your "),
         _c("span", { staticClass: "font-bold" }, [
           _vm._v(_vm._s(_vm.form.name))
         ]),
@@ -81558,34 +81558,17 @@ var mutations = {
     state.errors = errorList;
   },
   CLEAR_PARTICIPANTS_FORM: function CLEAR_PARTICIPANTS_FORM(state) {
-    // state.participantsForm = [
-    //     {
-    //         name: '',
-    //         email: '',
-    //         exclusions: [],
-    //     },
-    //     {
-    //         name: '',
-    //         email: '',
-    //         exclusions: [],
-    //     },
-    //     {
-    //         name: '',
-    //         email: '',
-    //         exclusions: [],
-    //     },
-    // ];
     state.participantsForm = [{
-      name: 'Toti',
-      email: 'cuervor14@gmail.com',
+      name: '',
+      email: '',
       exclusions: []
     }, {
-      name: 'Bre',
-      email: 'cuervor14@gmail.com',
+      name: '',
+      email: '',
       exclusions: []
     }, {
-      name: 'Jake',
-      email: 'cuervor14@gmail.cm',
+      name: '',
+      email: '',
       exclusions: []
     }];
   }

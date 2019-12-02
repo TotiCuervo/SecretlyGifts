@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65cb24ed-8fb8-4308-b700-6ff1b7ae9bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/mail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/name-drawn2.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/font/Baloo-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/secretlygift.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/secretlygift.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mail/name-drawn3.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Mail/DrawnName.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/DrawnName.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Create/AddParticipantIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/AddParticipantIndex.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Create/CreateEvent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/CreateEvent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Create/EventDetailPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/EventDetailPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Create/PreviewEmail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/PreviewEmail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Create/SubmitPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Create/SubmitPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Home/HomeScreenCallToAction.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home/HomeScreenCallToAction.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Logo/MediumLogo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Logo/MediumLogo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/modules/participant.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/participant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mail/name-drawn.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail/name-drawn.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/mail/html/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/mail/html/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mail/name-drawn2.blade.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +194,7 @@
       <workItem from="1573547560396" duration="21327000" />
       <workItem from="1573682307450" duration="139000" />
       <workItem from="1573682474088" duration="17069000" />
-      <workItem from="1574043405410" duration="77716000" />
+      <workItem from="1574043405410" duration="84371000" />
     </task>
     <servers />
   </component>
