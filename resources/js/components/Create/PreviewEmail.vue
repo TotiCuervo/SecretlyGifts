@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="w-full text-center pt-10 text-sm">
+        <div class="w-full text-center pt-10 text-sm pb-10">
             Want to start your own Secretly Gift Exchange? <a class="font-bold text-indigo-700 hover:text-indigo-800 text-decoration-none active:bounce-md trans-fast" href="http://secretly.test/#/">Let's get started!</a>
         </div>
 

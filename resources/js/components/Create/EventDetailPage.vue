@@ -88,6 +88,7 @@
                             axios.post('/api/event/'+$event.id+'/drawNames')
                                 .then(response => {
                                     this.loading = false;
+                                    this.$store.commit('page/SET_PAGE', 'SubmitPage');
                                 })
 
                         })

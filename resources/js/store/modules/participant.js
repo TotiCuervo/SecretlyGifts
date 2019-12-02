@@ -255,8 +255,8 @@ const mutations = {
     CLEAR_PARTICIPANTS_FORM(state){
         // state.participantsForm = [
         //     {
-        //         name: 'Toti',
-        //         email: 'cuervo@gmail.com',
+        //         name: '',
+        //         email: '',
         //         exclusions: [],
         //     },
         //     {
@@ -273,17 +273,17 @@ const mutations = {
         state.participantsForm = [
             {
                 name: 'Toti',
-                email: 'cuervo@gmail.com',
+                email: 'cuervor14@gmail.com',
                 exclusions: [],
             },
             {
                 name: 'Bre',
-                email: 'bre@gmail.com',
+                email: 'cuervor14@gmail.com',
                 exclusions: [],
             },
             {
                 name: 'Jake',
-                email: 'jake@gmail.com',
+                email: 'cuervor14@gmail.cm',
                 exclusions: [],
             },
         ];

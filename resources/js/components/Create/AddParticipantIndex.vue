@@ -29,9 +29,8 @@
                 // if (!this.errorFlag) {
                 //     this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
                 // }
-                // this.$store.commit('page/SET_PAGE', 'ExclusionsPage');
-                this.$store.commit('page/SET_PAGE', 'EventDetailPage');
 
+                this.$store.commit('page/SET_PAGE', 'ExclusionsPage')
 
             }
 

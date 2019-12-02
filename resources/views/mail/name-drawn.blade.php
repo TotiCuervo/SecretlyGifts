@@ -11,9 +11,9 @@
 {{$event->message}}
 
 <div class="w-full text-center pt-8">
-    <div class="block text-black text-xl text-indigo-700 font-baloo">
-        Your Drawn Name:
-    </div>
+<div class="block text-black text-xl text-indigo-700 font-baloo">
+    Your Drawn Name:
+</div>
     <div class="block font-baloo text-xl text-indigo-700">
         {{$participant->draw->name}}
     </div>
@@ -48,11 +48,5 @@
 <div class="w-full text-center pt-10 text-sm">
     Want to start your own Secretly Gift Exchange? <a class="font-bold text-indigo-700 hover:text-indigo-800 text-decoration-none active:bounce-md trans-fast" href="http://secretly.test/#/">Let's get started!</a>
 </div>
-
-@slot('footer')
-    @component('mail::footer')
-        Hello World
-    @endcomponent
-@endslot
 
 @endcomponent

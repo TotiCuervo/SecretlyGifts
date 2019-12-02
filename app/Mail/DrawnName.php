@@ -26,6 +26,7 @@ class DrawnName extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.name-drawn');
+//        return $this->markdown('mail.name-drawn2');
+        return $this->view('mail.name-drawn2');
     }
 }
