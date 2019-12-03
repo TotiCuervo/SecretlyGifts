@@ -26,6 +26,6 @@ class DrawnName extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.name-drawn3');
+        return $this->subject($this->event->name)->view('mail.name-drawn3');
     }
 }

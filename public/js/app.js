@@ -2029,6 +2029,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2053,8 +2055,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           participants: _this.participantsForm,
           event_id: $event.id
         }).then(function (response) {
-          console.log($event); //pairs participants
-
+          //pairs participants
           axios.post('/api/event/' + $event.id + '/drawNames').then(function (response) {
             _this.loading = false;
 
@@ -2190,6 +2191,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
 //
 //
 //
@@ -38703,41 +38707,36 @@ var render = function() {
       _c(
         "button",
         {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: !_vm.loading,
+              expression: "!loading"
+            }
+          ],
           staticClass:
             "float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm disabled:opacity-50 transition-fast",
           on: { click: _vm.submitForm }
         },
-        [
-          _c(
-            "span",
+        [_c("span", [_vm._v("Submit")])]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          directives: [
             {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: !_vm.loading,
-                  expression: "!loading"
-                }
-              ]
-            },
-            [_vm._v("Submit")]
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.loading,
-                  expression: "loading"
-                }
-              ]
-            },
-            [_vm._v("Submitting...")]
-          )
-        ]
+              name: "show",
+              rawName: "v-show",
+              value: _vm.loading,
+              expression: "loading"
+            }
+          ],
+          staticClass:
+            "float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm disabled:opacity-50 transition-fast"
+        },
+        [_c("span", [_vm._v("Submitting...")])]
       ),
       _vm._v(" "),
       _c(
@@ -38930,6 +38929,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c("div", { staticClass: "w-full text-sm text-indigo-700" }, [
+      _c("span", { staticClass: "font-bold" }, [_vm._v("Subject - ")]),
+      _vm._v(" " + _vm._s(this.form.name) + "\n    ")
+    ]),
+    _vm._v(" "),
     _vm._m(0),
     _vm._v(" "),
     _vm._m(1),
@@ -39462,14 +39466,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "label",
-      {
-        staticClass:
-          "block uppercase tracking-wide text-white text-xs font-bold"
-      },
-      [_vm._v("Name of Event")]
-    ),
+    _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "flex flex-wrap items-center py-2 w-full" }, [
       _c("input", {
@@ -39511,7 +39508,26 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      {
+        staticClass:
+          "block uppercase tracking-wide text-white text-xs font-bold"
+      },
+      [
+        _vm._v("Name of Event"),
+        _c("span", { staticClass: "font-normal lowercase" }, [
+          _vm._v(" - Will also be the subject of the emails")
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 

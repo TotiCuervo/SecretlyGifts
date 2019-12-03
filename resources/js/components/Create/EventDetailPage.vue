@@ -20,9 +20,11 @@
             <button @click="backButton" class="float-left bg-transparent hover:bg-green-500 border border-green-500 text-green-500 hover:text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm transition-fast" >
                 Back
             </button>
-            <button @click="submitForm" class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm disabled:opacity-50 transition-fast">
-                <span v-show="!loading">Submit</span>
-                <span v-show="loading">Submitting...</span>
+            <button v-show="!loading" @click="submitForm" class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm disabled:opacity-50 transition-fast">
+                <span>Submit</span>
+            </button>
+            <button v-show="loading" class="float-right bg-green-400 hover:bg-green-500 text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm disabled:opacity-50 transition-fast">
+                <span>Submitting...</span>
             </button>
             <button @click="$refs.modal.show()" class="float-right mr-4 bg-transparent hover:bg-green-500 border border-green-500 text-green-500 hover:text-indigo-700 font-bold py-2 px-4 rounded focus:outline-none active:bounce-sm transition-fast">
                 Preview
@@ -83,7 +85,6 @@
                             participants: this.participantsForm,
                             event_id: $event.id
                         }).then(response => {
-                            console.log($event);
                             //pairs participants
                             axios.post('/api/event/'+$event.id+'/drawNames')
                                 .then(response => {

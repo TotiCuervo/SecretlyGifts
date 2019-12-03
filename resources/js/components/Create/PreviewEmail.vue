@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="w-full text-sm text-indigo-700">
+            <span class="font-bold">Subject - </span> {{this.form.name}}
+        </div>
         <div class="w-full text-center text-5xl text-indigo-700">
             <div class="font-baloo font-extrabold">
                 Secretly

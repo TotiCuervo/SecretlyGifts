@@ -25,9 +25,8 @@ class Event extends Model
     public function sendAllDrawnEmails() {
 
         foreach ($this->participants()->get() as $participant) {
-            Log::error($participant->name);
 
-            Mail::to($participant->email)->send(
+            Mail::to($participant->email)->queue(
                 new DrawnName($participant, $this)
             );
         }
