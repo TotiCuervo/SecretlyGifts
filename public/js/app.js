@@ -39985,7 +39985,7 @@ var render = function() {
         "router-link",
         {
           staticClass:
-            "w-1/6 mx-auto rounded-full font-semibold py-2 px-4 border border-white rounded text-indigo-700 bg-white hover:shadow-lg focus:bounce-sm hover:translate-t-2px transition-fast focus:outline-none",
+            "mx-auto rounded-full font-semibold py-2 px-4 border border-white rounded text-indigo-700 bg-white hover:shadow-lg focus:bounce-sm hover:translate-t-2px transition-fast focus:outline-none",
           attrs: { to: { name: "createEvent" }, tag: "button" }
         },
         [_vm._v("\n        Get Started\n    ")]
@@ -40018,7 +40018,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container mx-auto text-center p-12 pt-32 text-white" },
+    { staticClass: "container mx-auto text-center p-10 pt-32 text-white" },
     [
       _c("BigLogo"),
       _vm._v(" "),
@@ -40051,7 +40051,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", { staticClass: "text-9xl font-baloo" }, [_vm._v("Secretly")])
+  return _c("h1", { staticClass: "text-7xl md:text-9xl font-baloo" }, [
+    _vm._v("Secretly")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
