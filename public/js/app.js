@@ -79078,6 +79078,9 @@ Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vu
 
 
 
+Vue.config.devtools = false;
+Vue.config.debug = false;
+Vue.config.silent = true;
 
 var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
 

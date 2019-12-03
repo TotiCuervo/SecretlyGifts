@@ -27,6 +27,10 @@ import Home from './components/Home.vue'
 import CreateEvent from './components/Create/CreateEvent'
 import  {store} from './store'
 
+Vue.config.devtools = false;
+Vue.config.debug = false;
+Vue.config.silent = true;
+
 
 const files = require.context('./', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
