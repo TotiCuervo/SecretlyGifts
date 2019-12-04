@@ -147,14 +147,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/ssl" />
       <recent name="$PROJECT_DIR$/resources/views/vendor/mail/html/themes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/ssl" />
       <recent name="$PROJECT_DIR$/public/.well-known/pki-validation" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/views/vendor/mail/html/font" />
       <recent name="$PROJECT_DIR$/resources/js/components/Logo" />
-      <recent name="$PROJECT_DIR$/resources/js/components/EventForm" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -188,7 +189,7 @@
       <workItem from="1573547560396" duration="21327000" />
       <workItem from="1573682307450" duration="139000" />
       <workItem from="1573682474088" duration="17069000" />
-      <workItem from="1574043405410" duration="87202000" />
+      <workItem from="1574043405410" duration="87493000" />
     </task>
     <servers />
   </component>
