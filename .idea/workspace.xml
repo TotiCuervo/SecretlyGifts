@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65cb24ed-8fb8-4308-b700-6ff1b7ae9bf2" name="Default Changelist" comment="" />
+    <list default="true" id="65cb24ed-8fb8-4308-b700-6ff1b7ae9bf2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +140,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/vendor/mail/html/themes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/ssl" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -148,11 +150,11 @@
       <recent name="$PROJECT_DIR$/resources/views/vendor/mail/html/themes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/.well-known/pki-validation" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/views/vendor/mail/html/font" />
       <recent name="$PROJECT_DIR$/resources/js/components/Logo" />
       <recent name="$PROJECT_DIR$/resources/js/components/EventForm" />
-      <recent name="$PROJECT_DIR$/resources/js/components/Home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,7 +188,7 @@
       <workItem from="1573547560396" duration="21327000" />
       <workItem from="1573682307450" duration="139000" />
       <workItem from="1573682474088" duration="17069000" />
-      <workItem from="1574043405410" duration="86908000" />
+      <workItem from="1574043405410" duration="87202000" />
     </task>
     <servers />
   </component>
