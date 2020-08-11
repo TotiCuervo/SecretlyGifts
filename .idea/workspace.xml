@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="65cb24ed-8fb8-4308-b700-6ff1b7ae9bf2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +193,19 @@
       <workItem from="1573547560396" duration="21327000" />
       <workItem from="1573682307450" duration="139000" />
       <workItem from="1573682474088" duration="17069000" />
-      <workItem from="1574043405410" duration="88383000" />
+      <workItem from="1574043405410" duration="88633000" />
+      <workItem from="1575941089242" duration="81000" />
+      <workItem from="1575941341540" duration="2521000" />
+      <workItem from="1575962034836" duration="4685000" />
+      <workItem from="1576053070065" duration="10000" />
+      <workItem from="1576181615716" duration="99000" />
+      <workItem from="1576183698755" duration="9000" />
+      <workItem from="1576713473458" duration="2365000" />
+      <workItem from="1579058109297" duration="609000" />
+      <workItem from="1584212145715" duration="42000" />
+      <workItem from="1590557871781" duration="644000" />
+      <workItem from="1593031708495" duration="354000" />
+      <workItem from="1595450405845" duration="549000" />
     </task>
     <servers />
   </component>

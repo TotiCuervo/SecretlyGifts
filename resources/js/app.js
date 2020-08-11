@@ -27,9 +27,9 @@ import Home from './components/Home.vue'
 import CreateEvent from './components/Create/CreateEvent'
 import  {store} from './store'
 
-Vue.config.devtools = false;
-Vue.config.debug = false;
-Vue.config.silent = true;
+// Vue.config.devtools = true;
+// Vue.config.debug = true;
+// Vue.config.silent = true;
 
 
 const files = require.context('./', true, /\.vue$/i)
