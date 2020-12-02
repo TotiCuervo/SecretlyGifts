@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-wrap items-center py-2 w-full">
-        <input v-model="email" v-bind:class="{'border-white': !error, 'border-red-600': error}" class="text-2xl w-full appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none" type="text" placeholder="RamenLover3000@hokage.com" aria-label="Full name">
+        <input v-model="email" :placeholder="this.placeholderText" v-bind:class="{'border-white': !error, 'border-red-600': error}" class="text-2xl w-full appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none" type="text" aria-label="Full name">
         <p v-if="error" class="text-red-600 font-extrabold text-sm w-full pt-2">{{message}}</p>
     </div>
 </template>
@@ -10,8 +10,25 @@
     export default {
         data() {
             return {
-
+                placeholderText: ""
             }
+        },
+        created() {
+            switch (this.index) {
+                case 0:
+                    this.placeholderText = "RamenLover3000@hokage.com";
+                    break;
+                case 1:
+                    this.placeholderText = "ShariganBoy@UchihaClan.com";
+                    break;
+                case 2:
+                    this.placeholderText = "SasukeXOXO@Shannaro.edu";
+                    break;
+                default:
+                    this.placeholderText = "HiddenGift@email.com";
+                    break;
+            };
+
         },
         props: {
             'index': {

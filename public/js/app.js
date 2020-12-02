@@ -3154,7 +3154,30 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      placeholderText: ""
+    };
+  },
+  created: function created() {
+    switch (this.index) {
+      case 0:
+        this.placeholderText = "RamenLover3000@hokage.com";
+        break;
+
+      case 1:
+        this.placeholderText = "ShariganBoy@UchihaClan.com";
+        break;
+
+      case 2:
+        this.placeholderText = "SasukeXOXO@Shannaro.edu";
+        break;
+
+      default:
+        this.placeholderText = "HiddenGift@email.com";
+        break;
+    }
+
+    ;
   },
   props: {
     'index': {
@@ -3229,7 +3252,30 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      placeholderText: ""
+    };
+  },
+  created: function created() {
+    switch (this.index) {
+      case 0:
+        this.placeholderText = "Naruto Uzumaki";
+        break;
+
+      case 1:
+        this.placeholderText = "Sasuke Uchiha";
+        break;
+
+      case 2:
+        this.placeholderText = "Sakura Haruno";
+        break;
+
+      default:
+        this.placeholderText = "Secret Gift Ninja";
+        break;
+    }
+
+    ;
   },
   props: {
     'index': {
@@ -40356,8 +40402,8 @@ var render = function() {
         "text-2xl w-full appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none",
       class: { "border-white": !_vm.error, "border-red-600": _vm.error },
       attrs: {
+        placeholder: this.placeholderText,
         type: "text",
-        placeholder: "RamenLover3000@hokage.com",
         "aria-label": "Full name"
       },
       domProps: { value: _vm.email },
@@ -40416,9 +40462,9 @@ var render = function() {
         "text-2xl appearance-none bg-transparent border-b-1.5 focus:border-green-500 w-full text-white mr-3 py-2 px-2 leading-tight focus:outline-none",
       class: { "border-white": !_vm.error, "border-red-600": _vm.error },
       attrs: {
+        placeholder: _vm.placeholderText,
         maxlength: "30",
         type: "text",
-        placeholder: "Naruto Uzamaki",
         "aria-label": "Full name"
       },
       domProps: { value: _vm.name },
